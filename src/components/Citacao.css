@@ -1,0 +1,62 @@
+.depoimento-bg {
+  position: relative;
+  background: url('/bg-pattern.svg'); /* ajuste se necessário */
+  background-repeat: repeat;
+  background-size: 300px;
+  background-color: #045E8A;
+  opacity: 1;
+  min-height: 350px; /* ajuste conforme necessário */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 80px; /* espaço para a onda */
+  text-align: center;
+  overflow: hidden;
+}
+
+.depoimento-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 20px 10px 20px;
+  z-index: 2;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.depoimento-content blockquote {
+  font-size: 1.8rem;
+  font-style: italic;
+  color: white;
+}
+
+.depoimento-content span {
+  display: block;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: white;
+  font-style: normal;
+}
+
+.wave-bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  line-height: 0;
+  z-index: 1;
+}
+
+@media (max-width: 600px) {
+  .depoimento-content blockquote {
+    font-size: 1rem; /* ajuste conforme necessário */
+    line-height: 1.4;
+  }
+  .depoimento-content span {
+    font-size: 0.9rem;
+  }
+}

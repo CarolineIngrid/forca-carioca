@@ -1,0 +1,26 @@
+.projetos-galeria {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.projetos-galeria h2 {
+  font-size: 2.5rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 2rem;
+}
+
+.mosaico {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mosaico-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}

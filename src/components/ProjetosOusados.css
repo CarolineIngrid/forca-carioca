@@ -1,0 +1,44 @@
+.projetos-ousados-container {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  min-height: 400px;
+  margin: 40px 0;
+}
+
+.imagem-ousada img {
+  width: 350px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px 0 0 12px;
+}
+
+.quadros-ousados {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.quadro-azul {
+  background: #009ca6;
+  height: 50%;
+  border-radius: 0 12px 0 0;
+}
+
+.quadro-branco {
+  background: #fff;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 0 12px 0;
+}
+
+.cursiva {
+  font-family: 'Dancing Script', cursive, sans-serif;
+  font-size: 2rem;
+  color: #009ca6;
+  text-align: center;
+  padding: 24px;
+}
