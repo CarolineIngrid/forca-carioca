@@ -21,7 +21,7 @@ const Sobre = () => {
            Com uma equipe experiente e comprometida, entregamos projetos com agilidade, precisão e responsabilidade, sempre buscando inovação e eficiência para nossos clientes.
           </p>
           <a
-            href="https://wa.me/5512991526876"
+            href="https://wa.me/552122414556"
             target="_blank"
             rel="noopener noreferrer"
             className="sobre-btn"
