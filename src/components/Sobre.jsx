@@ -20,7 +20,14 @@ const Sobre = () => {
           <p className="sobre-text">
            Com uma equipe experiente e comprometida, entregamos projetos com agilidade, precisão e responsabilidade, sempre buscando inovação e eficiência para nossos clientes.
           </p>
-          <button className="sobre-btn">ENTRE EM CONTATO</button>
+          <a
+            href="https://wa.me/5512991526876"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="sobre-btn"
+          >
+            ENTRE EM CONTATO
+          </a>
         </div>
       </div>
     </section>
