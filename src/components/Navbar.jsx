@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     function onScroll() {
@@ -12,6 +16,41 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  function scrollToSobre() {
+    const section = document.getElementById("sobre");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
+  function handleSobreClick() {
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        scrollToSobre();
+      }, 300);
+    } else {
+      scrollToSobre();
+    }
+    setOpen(false); // fecha menu mobile se aberto
+  }
+
+  function handleLogoClick() {
+    if (location.pathname !== "/") {
+      navigate("/");
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+    setOpen(false);
+  }
+
+  function handleProjetosClick() {
+    if (location.pathname !== "/projetos") {
+      navigate("/projetos");
+    }
+    setOpen(false);
+  }
+
   return (
     <nav
       className={`fixed top-0 left-0 w-full flex items-center justify-center px-8 py-6 z-20 transition-colors duration-300
@@ -19,7 +58,12 @@ export default function Navbar() {
       `}
     >
       {/* Logo centralizado */}
-      <span className="tracking-widest text-lg font-light">FORÇA CARIOCA</span>
+      <span
+        className="tracking-widest text-lg font-light cursor-pointer"
+        onClick={handleLogoClick}
+      >
+        FORÇA CARIOCA
+      </span>
 
       {/* Menu direito - Desktop */}
       <div
@@ -30,20 +74,16 @@ export default function Navbar() {
         <button
           type="button"
           className="cursor-pointer bg-transparent border-none outline-none"
-          onClick={() => {
-            const section = document.getElementById("sobre");
-            if (section) {
-              section.scrollIntoView({ behavior: "smooth" });
-            }
-          }}
+          onClick={handleSobreClick}
         >
           SOBRE
         </button>
         <button
           type="button"
           className="cursor-pointer bg-transparent border-none outline-none"
+          onClick={handleProjetosClick}
         >
-         PROJETOS
+          PROJETOS
         </button>
       </div>
 
@@ -65,19 +105,14 @@ export default function Navbar() {
           <button
             type="button"
             className="cursor-pointer bg-transparent border-none outline-none text-white text-base"
-            onClick={() => {
-              setOpen(false);
-              const section = document.getElementById("sobre");
-              if (section) {
-                section.scrollIntoView({ behavior: "smooth" });
-              }
-            }}
+            onClick={handleSobreClick}
           >
             SOBRE
           </button>
           <button
             type="button"
             className="cursor-pointer bg-transparent border-none outline-none text-white text-base"
+            onClick={handleProjetosClick}
           >
             PROJETOS
           </button>

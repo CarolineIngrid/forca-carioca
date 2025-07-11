@@ -1,8 +1,7 @@
-
 import "./Projetos.css";
 
 const imagens = [
-    "/galeria/image17.png",
+  "/galeria/image17.png",
   "/galeria/ape3.jpg",
   "/galeria/br1.jpg",
   "/galeria/easy2.jpg",

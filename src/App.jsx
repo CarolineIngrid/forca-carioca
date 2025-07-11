@@ -2,26 +2,18 @@ import './App.css'
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Sobre from "./components/Sobre";
-import Projetos from './components/Projetos';
-import ProjetosOusados from './components/ProjetosOusados';
+import ProjetosPreview from './components/ProjetosPreview';
 import Citacao from "./components/Citacao";
 import Footer from './components/Footer';
 
-function App() {
-
+export default function App() {
   return (
     <>
       <Header />
-      <Sobre/>
-      {/* <Hero/> */}
+      <Sobre />
       <Citacao />
-      <Projetos />
-      {/* <ProjetosOusados /> */}
+      <ProjetosPreview />
       <Footer />
-      
-      
     </>
   )
 }
-
-export default App
